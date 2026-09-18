@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="vi" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Security article detail page." />
     <title>Article</title>
     <link rel="icon" type="image/png" href="assets/images/monogram-logo.png" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=20260828-2" />
+    <link rel="preload" href="assets/fonts/Bangers-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="assets/css/styles.css?v=20260917-2" />
   </head>
   <body>
+    <div class="network-background" aria-hidden="true">
+      <canvas id="network-canvas"></canvas>
+    </div>
     <main class="article-detail">
-      <a class="back-link" id="article-back" href="index.html">Back to archive</a>
+      <div class="article-toolbar">
+        <a class="back-link" id="article-back" href="index.html">Back to archive</a>
+      </div>
 
       <article class="detail-frame">
         <header class="detail-header">
@@ -32,6 +38,7 @@
       </article>
     </main>
 
+    <script src="assets/js/network.js?v=20260917-2"></script>
     <script src="assets/js/article.js"></script>
   </body>
 </html>

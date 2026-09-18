@@ -22,5 +22,17 @@
     "tags": ["Craft CMS", "RCE", "CSRF", "MySQL", "Telnetd"],
     "src": "labs/Orion/Orion.md",
     "url": ""
+  },
+  {
+    "title": "Firewall / iptables",
+    "platform": "Linux",
+    "category": "Network Security",
+    "difficulty": "Practice",
+    "description": "Thực hành cấu hình Linux Firewall với iptables: chuyển tiếp ICMP, DNS, HTTP/HTTPS và mail giữa LAN, Internet và DMZ; áp dụng SNAT và DNAT.",
+    "date": "2026-09-16",
+    "status": "Notes",
+    "tags": ["iptables", "Firewall", "SNAT", "DNAT", "DNS"],
+    "src": "labs/Firewall/iptables.md",
+    "url": ""
   }
 ]

@@ -360,7 +360,7 @@ const loadWriteupManifest = async () => {
   }
 
   try {
-    const response = await fetch("writeups/manifest.json");
+    const response = await fetch("writeups/manifest.json", { cache: "no-cache" });
 
     if (!response.ok) {
       throw new Error("Cannot load writeups/manifest.json");
@@ -527,7 +527,7 @@ const loadLabManifest = async () => {
   }
 
   try {
-    const response = await fetch("labs/manifest.json");
+    const response = await fetch("labs/manifest.json", { cache: "no-cache" });
 
     if (!response.ok) {
       throw new Error("Cannot load labs/manifest.json");
