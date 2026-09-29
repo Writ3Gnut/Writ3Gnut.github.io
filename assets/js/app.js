@@ -54,13 +54,19 @@ const finishAnimation = async (animation) => {
 const switchPanel = async (button) => {
   const panelName = button.dataset.panel;
   const currentPanel = document.querySelector("[data-panel-content].active");
+  const workspace = document.querySelector(".workspace");
   const nextPanel = document.querySelector(`[data-panel-content="${panelName}"]`);
 
-  if (!nextPanel || nextPanel === currentPanel || panelTransitionActive) {
+  if (!nextPanel || panelTransitionActive) {
+    return;
+  }
+
+  if (nextPanel === currentPanel && !workspace?.classList.contains("intro-mode")) {
     return;
   }
 
   panelTransitionActive = true;
+  workspace?.classList.remove("intro-mode");
   if (panelFrame) {
     panelFrame.dataset.activePanel = panelName;
   }
@@ -87,13 +93,14 @@ const switchPanel = async (button) => {
   }
 
   currentPanel?.classList.remove("active");
-  if (currentPanel) {
+  if (currentPanel && currentPanel !== nextPanel) {
     currentPanel.hidden = true;
   }
 
   nextPanel.hidden = false;
   nextPanel.classList.add("active");
   nextPanel.scrollTop = 0;
+  document.querySelector(".panel-frame")?.scrollIntoView({ behavior: "smooth", block: "start" });
 
   if (!reduceMotion) {
     await finishAnimation(
@@ -118,6 +125,10 @@ const requestedPanel = window.location.hash.slice(1);
 const requestedButton = document.querySelector(`[data-panel="${requestedPanel}"]`);
 if (requestedButton && !requestedButton.classList.contains("active")) {
   requestedButton.click();
+}
+
+if (!requestedButton) {
+  document.querySelector(".workspace")?.classList.add("intro-mode");
 }
 
 profileToggle?.addEventListener("click", () => {

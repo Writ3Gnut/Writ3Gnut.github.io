@@ -5,7 +5,8 @@
     "eventKey": "bkisc",
     "category": "Web",
     "date": "2026-05-12",
-    "src": "writeups/Bkisc-CTF 2026/Secure note/README.md"
+    "src": "writeups/Bkisc-CTF 2026/Secure note/README.md",
+    "cover": "writeups/Bkisc-CTF 2026/Secure note/1.png"
   },
   {
     "title": "Echo ponch",
@@ -13,7 +14,8 @@
     "eventKey": "0xv10d",
     "category": "Web",
     "date": "2026-05-19",
-    "src": "writeups/0xV10D-CTF 2026/echo ponch/writeup.md"
+    "src": "writeups/0xV10D-CTF 2026/Echo ponch/writeup.md",
+    "cover": "-"
   },
   {
     "title": "Neon Mirage",
@@ -21,7 +23,8 @@
     "eventKey": "0xv10d",
     "category": "Web",
     "date": "2026-05-19",
-    "src": "writeups/0xV10D-CTF 2026/Neon Mirage/writeup.md"
+    "src": "writeups/0xV10D-CTF 2026/Neon Mirage/writeup.md",
+    "cover": "writeups/0xV10D-CTF 2026/Neon Mirage/image.png"
   },
   {
     "title": "Silent Oracle",
@@ -29,7 +32,8 @@
     "eventKey": "0xv10d",
     "category": "Web",
     "date": "2026-05-19",
-    "src": "writeups/0xV10D-CTF 2026/Silent Oracle/writeup.md"
+    "src": "writeups/0xV10D-CTF 2026/Silent Oracle/writeup.md",
+    "cover": "-"
   },
   {
     "title": "The Altered Grimoire",
@@ -37,23 +41,26 @@
     "eventKey": "0xv10d",
     "category": "Web",
     "date": "2026-05-19",
-    "src": "writeups/0xV10D-CTF 2026/The Altered Grimoire/writeup.md"
+    "src": "writeups/0xV10D-CTF 2026/The Altered Grimoire/writeup.md",
+    "cover": "writeups/0xV10D-CTF 2026/The Altered Grimoire/image.png"
   },
   {
-    "title":"ChatGPT Made Me Do It",
-    "event":"KMA-CTF-2026",
-    "eventKey":"KMA",
-    "category":"Web",
-    "date":"2026-05-27",
-    "src":"writeups/KMA-CTF-2026/ChatGPT Made Me Do It/public/writeup.md"
+    "title": "ChatGPT Made Me Do It",
+    "event": "KMA-CTF-2026",
+    "eventKey": "KMA",
+    "category": "Web",
+    "date": "2026-05-27",
+    "src": "writeups/KMA-CTF-2026/ChatGPT Made Me Do It/public/writeup.md",
+    "cover": "writeups/KMA-CTF-2026/ChatGPT Made Me Do It/public/image.png"
   },
   {
-    "title":"Thousandsoflightyears",
-    "event":"KMA-CTF-2026",
-    "eventKey":"KMA",
-    "category":"Web",
-    "date":"2026-05-27",
-    "src":"writeups/KMA-CTF-2026/thousandsoflightyears/writeup.md"
+    "title": "Thousandsoflightyears",
+    "event": "KMA-CTF-2026",
+    "eventKey": "KMA",
+    "category": "Web",
+    "date": "2026-05-27",
+    "src": "writeups/KMA-CTF-2026/Thousandsoflightyears/writeup.md",
+    "cover": "writeups/KMA-CTF-2026/Thousandsoflightyears/image.png"
   },
   {
     "title": "Gatery",
@@ -61,7 +68,8 @@
     "eventKey": "cyber-apocalypse",
     "category": "Web",
     "date": "2026-07-29",
-    "src": "writeups/Cyber Apocalypse CTF 2026/Web/Gatery.md"
+    "src": "writeups/Cyber Apocalypse CTF 2026/Web/Gatery.md",
+    "cover": "writeups/Cyber Apocalypse CTF 2026/Web/image.png"
   },
   {
     "title": "catvault - part 1",
@@ -69,7 +77,8 @@
     "eventKey": "l3ak",
     "category": "Web",
     "date": "2026-08-01",
-    "src": "writeups/L3ak-CTF 2026/catvault-part1/catvault - part 1.md"
+    "src": "writeups/L3ak-CTF 2026/catvault-part1/catvault - part 1.md",
+    "cover": "writeups/L3ak-CTF 2026/catvault-part1/image.png"
   },
   {
     "title": "Side Channel Surfer",
@@ -77,7 +86,8 @@
     "eventKey": "l3ak",
     "category": "Web",
     "date": "2026-08-04",
-    "src": "writeups/L3ak-CTF 2026/Side Channel Surfer/Side Channel Surfer.md"
+    "src": "writeups/L3ak-CTF 2026/Side Channel Surfer/Side Channel Surfer.md",
+    "cover": "writeups/L3ak-CTF 2026/Side Channel Surfer/image.png"
   },
   {
     "title": "Zebda",
@@ -85,7 +95,8 @@
     "eventKey": "l3ak",
     "category": "Web",
     "date": "2026-08-04",
-    "src": "writeups/L3ak-CTF 2026/Zebda/Zebda.md"
+    "src": "writeups/L3ak-CTF 2026/Zebda/Zebda.md",
+    "cover": "writeups/L3ak-CTF 2026/Zebda/image1.png"
   },
   {
     "title": "Binary Exploitation: Control Hijack & PIE",
@@ -101,6 +112,76 @@
     "eventKey": "nns-ctf-2026",
     "category": "Web",
     "date": "2026-09-05",
-    "src": "writeups/NNS-CTF-2026/Web/NNS Travel/NNS Travel.md"
+    "src": "writeups/NNS-CTF-2026/Web/NNS Travel/NNS Travel.md",
+    "cover": "writeups/NNS-CTF-2026/Web/NNS Travel/image.png"
+  },
+  {
+    "title": "Dreamhack Style Board",
+    "event": "Dreamhack CTF",
+    "eventKey": "dreamhack",
+    "category": "Web",
+    "date": "2026-09-10",
+    "src": "writeups/Dreamhack/style_board.md",
+    "cover": "writeups/Dreamhack/image.png"
+  },
+  {
+    "title": "Groundhog Day",
+    "event": "SunShine CTF 2026",
+    "eventKey": "sunshine-2026",
+    "category": "Web",
+    "date": "2026-09-29",
+    "src": "writeups/SunShine-CTF 2026/Groundhog Day.md",
+    "cover": "writeups/SunShine-CTF 2026/image-12.png",
+    "images": [
+      "image-12.png",
+      "image-13.png",
+      "image-14.png",
+      "image-15.png",
+      "image-16.png"
+    ]
+  },
+  {
+    "title": "Total Recall",
+    "event": "SunShine CTF 2026",
+    "eventKey": "sunshine-2026",
+    "category": "Pwn",
+    "date": "2026-09-27",
+    "src": "writeups/SunShine-CTF 2026/Total Recall.md",
+    "cover": "writeups/SunShine-CTF 2026/image.png",
+    "images": [
+      "image.png"
+    ]
+  },
+  {
+    "title": "Used Goods of Tomorrow",
+    "event": "SunShine CTF 2026",
+    "eventKey": "sunshine-2026",
+    "category": "Web",
+    "date": "2026-09-28",
+    "src": "writeups/SunShine-CTF 2026/Used Goods of Tomorrow.md",
+    "cover": "writeups/SunShine-CTF 2026/image-2.png",
+    "images": [
+      "image-1.png",
+      "image-2.png",
+      "image-3.png",
+      "image-4.png",
+      "image-5.png",
+      "image-6.png",
+      "image-7.png"
+    ]
+  },
+  {
+    "title": "You Are Kidding Me",
+    "event": "SunShine CTF 2026",
+    "eventKey": "sunshine-2026",
+    "category": "Web",
+    "date": "2026-09-28",
+    "src": "writeups/SunShine-CTF 2026/You Are Kidding Me.md",
+    "cover": "writeups/SunShine-CTF 2026/image-11.png",
+    "images": [
+      "image-9.png",
+      "image-10.png",
+      "image-11.png"
+    ]
   }
 ]

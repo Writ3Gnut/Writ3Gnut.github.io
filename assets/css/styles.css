@@ -212,6 +212,39 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .profile-links a:hover { border-color: var(--blue-300); color: var(--blue-950); background: var(--blue-200); }
 
 .workspace { display: grid; min-width: 0; min-height: 100svh; grid-template-rows: auto minmax(0, 1fr); }
+.workspace.intro-mode { grid-template-rows: auto minmax(0, 1fr); }
+.workspace.intro-mode .topbar { order: 1; }
+.workspace.intro-mode .panel-frame { order: 2; min-height: 100svh; }
+.workspace.intro-mode .intro-announcement { display: flex; }
+.content-panel[id], .content-panel { scroll-margin-top: 1rem; }
+
+.intro-announcement {
+  position: relative;
+  display: none;
+  min-height: 100svh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.5rem 3.25rem;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  isolation: isolate;
+  background: radial-gradient(ellipse at 50% 30%, rgba(100, 167, 247, 0.22), transparent 28rem), linear-gradient(145deg, rgba(16, 44, 86, 0.76), rgba(12, 29, 56, 0.76) 62%, rgba(8, 23, 43, 0.76));
+}
+.intro-announcement::before, .intro-announcement::after { position: absolute; inset: 0; z-index: -1; content: ""; pointer-events: none; }
+.intro-announcement::before {
+  opacity: 0.38;
+  background-image: radial-gradient(circle at 12% 20%, #64a7f7 0 2px, transparent 2.5px), radial-gradient(circle at 76% 26%, #64a7f7 0 2px, transparent 2.5px), radial-gradient(circle at 32% 77%, #64a7f7 0 2px, transparent 2.5px), linear-gradient(29deg, transparent 49.8%, rgba(100, 167, 247, 0.34) 50%, transparent 50.2%), linear-gradient(151deg, transparent 49.8%, rgba(100, 167, 247, 0.26) 50%, transparent 50.2%);
+  background-size: 290px 210px, 350px 250px, 420px 300px, 180px 130px, 240px 170px;
+}
+.intro-announcement::after { background: linear-gradient(180deg, transparent 72%, rgba(7, 19, 37, 0.72)); }
+.announcement-orbit { position: absolute; top: 20%; left: 50%; width: 8rem; aspect-ratio: 1; border: 1px solid rgba(100, 167, 247, 0.32); border-radius: 50%; box-shadow: 0 0 0 1.15rem rgba(100, 167, 247, 0.06), 0 0 65px rgba(100, 167, 247, 0.22); transform: translateX(-50%); pointer-events: none; }
+.announcement-kicker { color: #9dcafb; font-size: 0.74rem; font-weight: 850; letter-spacing: 0.19em; text-transform: uppercase; }
+.intro-announcement h1 { margin: 1rem 0 0.85rem; color: #72c4ff; font-family: "Bangers", Impact, sans-serif; font-size: clamp(4.25rem, 11vw, 9rem); font-weight: 400; letter-spacing: 0.035em; line-height: 0.95; text-shadow: 0 5px 0 #102b54, 0 16px 42px rgba(59, 139, 240, 0.28); }
+.intro-announcement p { max-width: 46rem; margin: 0; color: #d0deef; font-size: clamp(1rem, 2vw, 1.3rem); }
+.announcement-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 1.6rem; }
+.announcement-tags span { border: 1px solid rgba(157, 202, 251, 0.38); border-radius: 999px; padding: 0.34rem 0.8rem; color: #d5ebff; background: rgba(100, 167, 247, 0.1); font-size: 0.72rem; font-weight: 750; }
 
 .topbar {
   position: sticky;
@@ -291,8 +324,8 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .panel-frame {
   position: relative;
   min-width: 0;
-  min-height: 0;
-  overflow: hidden;
+  min-height: calc(100svh - 5.25rem);
+  overflow: visible;
   background: transparent;
 }
 
@@ -701,6 +734,8 @@ del { color: var(--muted); text-decoration-color: var(--danger); }
 }
 
 @media (max-width: 760px) {
+  .intro-announcement { min-height: 100svh; padding: 3.5rem 1.15rem 2.5rem; }
+  .announcement-orbit { top: 12%; width: 5rem; }
   .panel-frame { background-attachment: scroll; }
   .topbar { position: relative; grid-template-columns: auto minmax(0, 1fr); padding: 0.8rem 1rem 0; }
   .function-nav { grid-column: 1 / -1; width: calc(100% + 2rem); margin-left: -1rem; border-width: 1px 0 0; border-radius: 0; padding: 0.45rem 0.7rem; overflow-x: auto; background: rgba(248, 251, 255, 0.92); }

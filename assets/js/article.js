@@ -37,7 +37,7 @@ const resolveAsset = (url) => {
     return url;
   }
 
-  return `${basePath(src || "")}/${url}`.replaceAll(" ", "%20");
+  return encodeURI(`${basePath(src || "")}/${url}`);
 };
 
 const renderInline = (text) => {
