@@ -17,7 +17,7 @@ const kindConfig = {
   writeup: { label: "Writeup", panel: "ctf", back: "Back to writeups" },
   project: { label: "Project", panel: "projects", back: "Back to projects" },
   lab: { label: "Lab", panel: "labs", back: "Back to labs" },
-  blog: { label: "Blog", panel: "blogs", back: "Back to blogs" },
+  blog: { label: "Note", panel: "blogs", back: "Back to notes" },
 };
 
 const currentKind = kindConfig[kind] || kindConfig.writeup;

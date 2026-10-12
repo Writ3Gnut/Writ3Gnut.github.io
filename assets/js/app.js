@@ -25,7 +25,7 @@ const titles = {
   ctf: "Writeups",
   projects: "Projects",
   labs: "Labs",
-  blogs: "Blogs",
+  blogs: "Notes",
   team: "Our team",
 };
 
@@ -171,7 +171,7 @@ const articleHref = (item, kind) => {
     writeup: `${item.event} / ${item.category}`,
     project: `${item.type} / Project`,
     lab: `${item.platform} / ${item.category} / Lab`,
-    blog: `${item.category} / Blog`,
+    blog: `${item.category} / Note`,
   };
   const query = new URLSearchParams();
 
@@ -567,7 +567,7 @@ const renderBlogs = (items) => {
   }
 
   if (!items.length) {
-    blogList.innerHTML = `<p class="load-error">No blog posts yet.</p>`;
+    blogList.innerHTML = `<p class="load-error">No notes yet.</p>`;
     return;
   }
 
@@ -604,7 +604,7 @@ const loadBlogManifest = async () => {
 
     renderBlogs(await response.json());
   } catch (error) {
-    blogList.innerHTML = `<p class="load-error">Cannot load blog list.</p>`;
+    blogList.innerHTML = `<p class="load-error">Cannot load notes list.</p>`;
     console.error(error);
   }
 };
