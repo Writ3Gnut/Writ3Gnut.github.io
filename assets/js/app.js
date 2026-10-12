@@ -196,6 +196,9 @@ const normalizeSearchText = (value) =>
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
 
+const compareWriteupsByNewestDate = (first, second) =>
+  (second.date || "").localeCompare(first.date || "");
+
 const groupWriteupsByEvent = (items) =>
   [...items.reduce((groups, item) => {
     if (!groups.has(item.eventKey)) {
@@ -208,7 +211,12 @@ const groupWriteupsByEvent = (items) =>
 
     groups.get(item.eventKey).items.push(item);
     return groups;
-  }, new Map()).values()];
+  }, new Map()).values()]
+    .map((group) => ({
+      ...group,
+      items: [...group.items].sort(compareWriteupsByNewestDate),
+    }))
+    .sort((first, second) => compareWriteupsByNewestDate(first.items[0], second.items[0]));
 
 let activeWriteupEvent = null;
 let writeupItems = [];
@@ -326,7 +334,7 @@ const renderWriteups = () => {
   writeupGrid.innerHTML = visibleGroups
     .map((group) => {
       const categories = [...new Set(group.items.map((item) => item.category))];
-      const latestDate = [...group.items].sort((a, b) => b.date.localeCompare(a.date))[0]?.date;
+      const latestDate = group.items[0]?.date;
       const countLabel = `${group.items.length} writeup${group.items.length === 1 ? "" : "s"}`;
 
       return `

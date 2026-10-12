@@ -643,6 +643,11 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .markdown-body h2 { border-bottom: 1px solid var(--line); padding-bottom: 0.55rem; font-size: 1.45rem; }
 .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 { font-size: 1.12rem; }
 .markdown-body ul, .markdown-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
+.markdown-table-wrap { margin: 1.25rem 0; overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--paper); box-shadow: var(--shadow-xs); }
+.markdown-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.markdown-table th, .markdown-table td { border-bottom: 1px solid var(--line); padding: 0.72rem 0.85rem; vertical-align: top; }
+.markdown-table tr:last-child td { border-bottom: 0; }
+.markdown-table th { color: var(--blue-800); background: var(--blue-50); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
 .markdown-body blockquote { margin: 1.2rem 0; border-left: 3px solid var(--blue-500); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 0.75rem 1rem; color: var(--muted); background: var(--blue-50); }
 .markdown-body blockquote p { margin-bottom: 0; }
 .markdown-body hr { height: 1px; border: 0; margin: 2rem 0; background: var(--line); }

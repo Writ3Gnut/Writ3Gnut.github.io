@@ -112,6 +112,29 @@ const renderCodeBlock = (codeLines, language = "") => {
   `;
 };
 
+const parseTableRow = (line) =>
+  line
+    .trim()
+    .replace(/^\|/, "")
+    .replace(/\|$/, "")
+    .split("|")
+    .map((cell) => cell.trim());
+
+const isTableDivider = (line) => {
+  const cells = parseTableRow(line);
+  return cells.length > 0 && cells.every((cell) => /^:?-{3,}:?$/.test(cell));
+};
+
+const tableAlignment = (divider) => {
+  if (divider.startsWith(":") && divider.endsWith(":")) {
+    return "center";
+  }
+  if (divider.endsWith(":")) {
+    return "right";
+  }
+  return "left";
+};
+
 const renderMarkdown = (markdown) => {
   const lines = stripFrontmatter(markdown).split(/\r?\n/);
   const html = [];
@@ -149,7 +172,8 @@ const renderMarkdown = (markdown) => {
     closeList();
   };
 
-  for (const line of lines) {
+  for (let lineIndex = 0; lineIndex < lines.length; lineIndex += 1) {
+    const line = lines[lineIndex];
     const fence = line.trim().match(/^```([\w#+.-]*)/);
     if (fence) {
       if (inCode) {
@@ -173,6 +197,43 @@ const renderMarkdown = (markdown) => {
 
     if (!trimmed) {
       closeBlocks();
+      continue;
+    }
+
+    if (
+      trimmed.includes("|") &&
+      lineIndex + 1 < lines.length &&
+      isTableDivider(lines[lineIndex + 1])
+    ) {
+      closeBlocks();
+      const headers = parseTableRow(line);
+      const dividers = parseTableRow(lines[lineIndex + 1]);
+      const alignments = headers.map((_, index) => tableAlignment(dividers[index] || "---"));
+      const rows = [];
+
+      lineIndex += 2;
+      while (lineIndex < lines.length && lines[lineIndex].trim().includes("|")) {
+        rows.push(parseTableRow(lines[lineIndex]));
+        lineIndex += 1;
+      }
+      lineIndex -= 1;
+
+      const renderRow = (cells, tag) =>
+        `<tr>${headers
+          .map(
+            (_, index) =>
+              `<${tag} style="text-align: ${alignments[index]}">${renderInline(cells[index] || "")}</${tag}>`,
+          )
+          .join("")}</tr>`;
+
+      html.push(`
+        <div class="markdown-table-wrap">
+          <table class="markdown-table">
+            <thead>${renderRow(headers, "th")}</thead>
+            <tbody>${rows.map((row) => renderRow(row, "td")).join("")}</tbody>
+          </table>
+        </div>
+      `);
       continue;
     }
 

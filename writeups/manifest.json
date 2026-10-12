@@ -59,8 +59,8 @@
     "eventKey": "KMA",
     "category": "Web",
     "date": "2026-05-27",
-    "src": "writeups/KMA-CTF-2026/Thousandsoflightyears/writeup.md",
-    "cover": "writeups/KMA-CTF-2026/Thousandsoflightyears/image.png"
+    "src": "writeups/KMA-CTF-2026/thousandsoflightyears/writeup.md",
+    "cover": "writeups/KMA-CTF-2026/thousandsoflightyears/image.png"
   },
   {
     "title": "Gatery",
@@ -183,5 +183,22 @@
       "image-10.png",
       "image-11.png"
     ]
+  },
+  {
+    "title": "Doctor Bye Bye",
+    "event": "FortID CTF 2026",
+    "eventKey": "fortid-2026",
+    "category": "Web",
+    "date": "2026-10-12",
+    "src": "writeups/FortID-CTF-2026/Doctor Bye Bye/Doctor Bye Bye.md"
+  },
+  {
+    "title": "Ultimative PHP",
+    "event": "FortID CTF 2026",
+    "eventKey": "fortid-2026",
+    "category": "Web",
+    "date": "2026-10-12",
+    "src": "writeups/FortID-CTF-2026/Ultimative PHP/Ultimative PHP.md",
+    "cover": "writeups/FortID-CTF-2026/Ultimative PHP/image.png"
   }
 ]
