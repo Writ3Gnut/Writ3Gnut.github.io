@@ -633,7 +633,7 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .toc-level-3 { padding-left: 2.15rem; }
 
 .markdown-body { min-width: 0; color: #33425a; font-size: 0.96rem; }
-.markdown-body p { margin-bottom: 1rem; }
+.markdown-body p { margin-bottom: 1rem; text-align: justify; text-justify: inter-word; }
 .markdown-body li { margin-bottom: 0.42rem; }
 .markdown-body a { color: var(--blue-600); font-weight: 700; text-decoration: underline; text-decoration-color: var(--blue-200); text-underline-offset: 3px; }
 .markdown-body img, .markdown-image { display: block; width: auto; max-width: 100%; height: auto; margin: 1.6rem 0; border: 1px solid var(--line); border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
@@ -645,7 +645,7 @@ h1, h2, h3, h4, p { margin-top: 0; }
 .markdown-body ul, .markdown-body ol { margin: 0 0 1rem; padding-left: 1.35rem; }
 .markdown-table-wrap { margin: 1.25rem 0; overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--paper); box-shadow: var(--shadow-xs); }
 .markdown-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-.markdown-table th, .markdown-table td { border-bottom: 1px solid var(--line); padding: 0.72rem 0.85rem; vertical-align: top; }
+.markdown-table th, .markdown-table td { border-bottom: 1px solid var(--line); padding: 0.72rem 0.85rem; text-align: center; vertical-align: top; }
 .markdown-table tr:last-child td { border-bottom: 0; }
 .markdown-table th { color: var(--blue-800); background: var(--blue-50); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }
 .markdown-body blockquote { margin: 1.2rem 0; border-left: 3px solid var(--blue-500); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 0.75rem 1rem; color: var(--muted); background: var(--blue-50); }

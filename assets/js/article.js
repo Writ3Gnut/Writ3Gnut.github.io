@@ -97,9 +97,9 @@ const renderCodeBlock = (codeLines, language = "") => {
     .join("");
 
   return `
-    <section class="code-block" data-language="${escapeHtml(normalizedLanguage)}">
+    <section class="code-block is-collapsed" data-language="${escapeHtml(normalizedLanguage)}">
       <div class="code-toolbar">
-        <button class="code-toggle" type="button" aria-expanded="true" title="Thu gọn hoặc mở rộng code">
+        <button class="code-toggle" type="button" aria-expanded="false" title="Mở hoặc thu gọn code">
           <span class="code-chevron" aria-hidden="true"></span>
           <span>${language ? `Code · ${escapeHtml(languageLabel)}` : "Code"}</span>
         </button>
@@ -107,7 +107,7 @@ const renderCodeBlock = (codeLines, language = "") => {
           <span class="copy-icon" aria-hidden="true"></span>
         </button>
       </div>
-      <pre><code>${renderedLines}</code></pre>
+      <pre hidden><code>${renderedLines}</code></pre>
     </section>
   `;
 };
@@ -123,16 +123,6 @@ const parseTableRow = (line) =>
 const isTableDivider = (line) => {
   const cells = parseTableRow(line);
   return cells.length > 0 && cells.every((cell) => /^:?-{3,}:?$/.test(cell));
-};
-
-const tableAlignment = (divider) => {
-  if (divider.startsWith(":") && divider.endsWith(":")) {
-    return "center";
-  }
-  if (divider.endsWith(":")) {
-    return "right";
-  }
-  return "left";
 };
 
 const renderMarkdown = (markdown) => {
@@ -207,8 +197,6 @@ const renderMarkdown = (markdown) => {
     ) {
       closeBlocks();
       const headers = parseTableRow(line);
-      const dividers = parseTableRow(lines[lineIndex + 1]);
-      const alignments = headers.map((_, index) => tableAlignment(dividers[index] || "---"));
       const rows = [];
 
       lineIndex += 2;
@@ -222,7 +210,7 @@ const renderMarkdown = (markdown) => {
         `<tr>${headers
           .map(
             (_, index) =>
-              `<${tag} style="text-align: ${alignments[index]}">${renderInline(cells[index] || "")}</${tag}>`,
+              `<${tag}>${renderInline(cells[index] || "")}</${tag}>`,
           )
           .join("")}</tr>`;
 
