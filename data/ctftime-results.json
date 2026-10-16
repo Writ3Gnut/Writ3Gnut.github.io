@@ -1,10 +1,10 @@
 {
   "teamId": 410831,
   "teamUrl": "https://ctftime.org/team/410831",
-  "updatedAt": "2026-10-15T04:52:44.500891+00:00",
+  "updatedAt": "2026-10-16T04:43:34.220775+00:00",
   "rankings": {
-    "world": 376,
-    "vietnam": 34
+    "world": 371,
+    "vietnam": 35
   },
   "years": {
     "2026": [
@@ -59,6 +59,13 @@
         "ctfPoints": "4610.0000",
         "ratingPoints": "14.371",
         "url": "https://ctftime.org/event/3178"
+      },
+      {
+        "place": 108,
+        "event": "FortID CTF 2026",
+        "ctfPoints": "1641.0000",
+        "ratingPoints": "13.162",
+        "url": "https://ctftime.org/event/3440"
       },
       {
         "place": 115,
