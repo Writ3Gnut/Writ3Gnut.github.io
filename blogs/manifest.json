@@ -1,11 +1,11 @@
 [
   {
-    "title": "Lỗi bộ nhớ: Những vấn đề ở mức cao",
-    "description": "Ghi chú về quản lý bộ nhớ, stack overflow, integer overflow và các lỗi phổ biến trong khai thác binary.",
-    "category": "Binary Exploitation",
+    "title": "Introduction Metasploit",
+    "description": "Giới thiệu về frame work Metasploit",
+    "category": "Framework exploit",
     "date": "2026-07-22",
-    "tags": ["Pwn", "Memory", "C"],
-    "src": "blogs/Binary Exploitation/readme.md"
+    "tags": ["CVE", "Payload"],
+    "src": "blogs/Metasploit.md"
   }
   
 ]
