@@ -7,7 +7,13 @@
     "description": "Khai thác IDOR để lấy PCAP chứa credential FTP, dùng lại mật khẩu qua SSH và leo thang đặc quyền bằng Linux capabilities.",
     "date": "2026-08-08",
     "status": "Completed",
-    "tags": ["IDOR", "PCAP", "FTP", "SSH", "Capabilities"],
+    "tags": [
+      "IDOR",
+      "PCAP",
+      "FTP",
+      "SSH",
+      "Capabilities"
+    ],
     "src": "labs/Cap/Cap.md",
     "url": ""
   },
@@ -19,7 +25,13 @@
     "description": "Khai thác Craft CMS RCE, thu thập credential từ môi trường ứng dụng và leo thang đặc quyền qua telnetd vulnerable.",
     "date": "2026-08-11",
     "status": "Completed",
-    "tags": ["Craft CMS", "RCE", "CSRF", "MySQL", "Telnetd"],
+    "tags": [
+      "Craft CMS",
+      "RCE",
+      "CSRF",
+      "MySQL",
+      "Telnetd"
+    ],
     "src": "labs/Orion/Orion.md",
     "url": ""
   },
@@ -31,8 +43,63 @@
     "description": "Thực hành cấu hình Linux Firewall với iptables: chuyển tiếp ICMP, DNS, HTTP/HTTPS và mail giữa LAN, Internet và DMZ; áp dụng SNAT và DNAT.",
     "date": "2026-09-16",
     "status": "Notes",
-    "tags": ["iptables", "Firewall", "SNAT", "DNAT", "DNS"],
+    "tags": [
+      "iptables",
+      "Firewall",
+      "SNAT",
+      "DNAT",
+      "DNS"
+    ],
     "src": "labs/Firewall/iptables.md",
+    "url": ""
+  },
+  {
+    "title": "Touch",
+    "platform": "Lab",
+    "category": "Windows",
+    "difficulty": "Practice",
+    "description": "Ghi chú thu thập thông tin và khai thác máy Touch.",
+    "date": "",
+    "status": "Notes",
+    "tags": [
+      "Windows",
+      "Web"
+    ],
+    "src": "labs/Touch/Touch.md",
+    "url": ""
+  },
+  {
+    "title": "Metasploitable 2",
+    "platform": "Metasploitable",
+    "category": "Security Practice",
+    "difficulty": "Practice",
+    "description": "Thực hành thu thập thông tin, quét dịch vụ và tìm lỗ hổng trên Metasploitable 2.",
+    "date": "",
+    "status": "Notes",
+    "tags": [
+      "Nmap",
+      "Nessus",
+      "Enumeration"
+    ],
+    "src": "labs/Metasploitable 2/Writeup.md",
+    "url": ""
+  },
+  {
+    "title": "PortSwigger Mystery Lab",
+    "platform": "PortSwigger",
+    "category": "Web",
+    "difficulty": "Practice",
+    "description": "Ghi chú thực hành SQL injection, XSS, kiểm soát truy cập, tải tệp và kiểm thử API.",
+    "date": "",
+    "status": "Notes",
+    "tags": [
+      "SQL Injection",
+      "XSS",
+      "Access Control",
+      "File Upload",
+      "API"
+    ],
+    "src": "writeups/Portswigger Mystery Lab/writeup.md",
     "url": ""
   }
 ]
